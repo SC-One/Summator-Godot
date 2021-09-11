@@ -1,0 +1,30 @@
+
+Import('env')
+
+module_env = env.Clone()
+module_env.add_source_files(env.modules_sources, "*.cpp")
+
+
+
+
+
+################################################ extra information :
+## add multiple files from dir to buildsystem
+#src_list = ["summator.cpp", "other.cpp", "etc.cpp"]
+#env.add_source_files(env.modules_sources, src_list)
+
+## @@@@@@@@@@@@@@@ Important Note @@@@@@@@@@@@@@@
+## To add include directories for the compiler to look at you can append it to the environment's paths:
+#env.Append(CPPPATH=["mylib/include"]) # this is a relative path
+#env.Append(CPPPATH=["#myotherlib/include"]) # this is an 'absolute' path
+## @@@@ more info @@@@
+## https://docs.godotengine.org/en/stable/development/cpp/binding_to_external_libraries.html#doc-binding-to-external-libraries
+
+
+## @@@@@@@@@@@@@@@ Important Note @@@@@@@@@@@@@@@
+## Cpp custom flags
+## Append CCFLAGS flags for both C and C++ code.
+#module_env.Append(CCFLAGS=['-O2'])
+## If you need to, you can:
+## - Append CFLAGS for C code only.
+## - Append CXXFLAGS for C++ code only.
