@@ -1,6 +1,6 @@
 #ifndef SUMMATOR_H
 #define SUMMATOR_H
-
+#include "/home/sc/prj/GODO/Source/godot/core/reference.h"
 class Summator : public Reference {
   GDCLASS(Summator, Reference);
 

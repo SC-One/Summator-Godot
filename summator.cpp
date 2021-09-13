@@ -1,4 +1,4 @@
-#include "Summator.h"
+#include "summator.h"
 
 void Summator::add(int p_value) { count += p_value; }
 
